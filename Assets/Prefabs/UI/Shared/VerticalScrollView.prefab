@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3780239781773791757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8700321019683276054, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321019683276054, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Color.g
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321019683276054, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Color.r
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321019683276055, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321019683276055, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802018, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Name
+      value: VerticalScrollView
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700321021023802021, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8700321020206413512, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+--- !u!1 &5533696692431955195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8700321020206413558, guid: 50eed361fd843724f8d8d145a25dad57, type: 3}
+  m_PrefabInstance: {fileID: 3780239781773791757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7432346726524489009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5533696692431955195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
