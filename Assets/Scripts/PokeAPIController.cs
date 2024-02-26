@@ -17,7 +17,6 @@ public class PokeAPIController : Singleton<PokeAPIController>
     PokeAPIBackend pokeAPIBackend = new PokeAPIBackend();
 
     int maxPokemonCount;
-    UniTask evolutionChainTask;
 
     const string language = "en";
 
@@ -25,8 +24,6 @@ public class PokeAPIController : Singleton<PokeAPIController>
     {
         cancellationTokenSource = new CancellationTokenSource();
         cancelToken = cancellationTokenSource.Token;
-        //evolutionChainTask = GetPokemonEvolutionChains();
-        //evolutionChainTask.Forget();
     }
 
     void OnDestroy()
@@ -70,7 +67,10 @@ public class PokeAPIController : Singleton<PokeAPIController>
             return pokemon;
         }
         pokemon = await pokeAPIBackend.GetResourceAsync<Pokemon>(id, cancelToken);
-        pokemons.Add(pokemon);
+        if (pokemon != null)
+        {
+            pokemons.Add(pokemon);
+        }
         return pokemon;
     }
 
@@ -82,7 +82,10 @@ public class PokeAPIController : Singleton<PokeAPIController>
             return pokemon;
         }
         pokemon = await pokeAPIBackend.GetResourceAsync<Pokemon>(name, cancelToken);
-        pokemons.Add(pokemon);
+        if (pokemon != null)
+        {
+            pokemons.Add(pokemon);
+        }
         return pokemon;
     }
 
@@ -105,23 +108,24 @@ public class PokeAPIController : Singleton<PokeAPIController>
     public async UniTask<string> GetAbilityDescription(string abilityName)
     {
         string result = string.Empty;
-        try
-        {
-            Ability ability = await pokeAPIBackend.GetResourceAsync<Ability>(abilityName, cancelToken);
-            result = ability.EffectEntries.Find(e => e.Language.Name == language)?.Effect ?? string.Empty;
-        }
-        catch(Exception ex)
-        {
-            int x = 5;
-        }
-
-        return result;
+        Ability ability = await pokeAPIBackend.GetResourceAsync<Ability>(abilityName, cancelToken);
+        return ability.EffectEntries.Find(e => e.Language.Name == language)?.Effect ?? string.Empty;
     }
 
     public async UniTask<EvolutionChainCompactData> GetPokemonEvolutionChain(string speciesUrl)
     {
         PokemonSpecies species = await pokeAPIBackend.GetResourceByUrlAsync<PokemonSpecies>(speciesUrl, cancelToken);
+        if (species == null)
+        {
+            return null;
+        }
+
         EvolutionChain evolutionChain = await pokeAPIBackend.GetResourceByUrlAsync<EvolutionChain>(species.EvolutionChain.Url, cancelToken);
+        if (evolutionChain == null)
+        {
+            return null;
+        }
+
         int evolutionId = evolutionChain.Id;
         EvolutionChainCompactData evolutionChainData = evolutionChains.FirstOrDefault(e => e.evolutionId == evolutionId);
         if (evolutionChainData != null)
@@ -136,6 +140,10 @@ public class PokeAPIController : Singleton<PokeAPIController>
         ChainLink chain = evolutionChain.Chain;
         string pokemonName = chain.Species.Name;
         Pokemon pokemon = await GetPokemonData(pokemonName);
+        if (pokemon == null)
+        {
+               return null;
+        }
         evolutionChainData.evolutionElementsIds.Add(pokemon.Id);
 
         if (chain.EvolvesTo == null || chain.EvolvesTo.Count == 0)

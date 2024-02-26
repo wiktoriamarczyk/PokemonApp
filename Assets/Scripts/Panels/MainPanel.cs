@@ -101,6 +101,7 @@ public class MainPanel : Panel
     {
         if (string.IsNullOrEmpty(input) && pokemonGrid.displayedPokemons < 2)
         {
+            emptyPanelInfo.SetActive(false);
             pokemonGrid.CreatePokemonsGrid(currentPage).Forget();
         }
     }

@@ -5,7 +5,6 @@ using System.Reflection;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 using UnityEngine;
-using System.Diagnostics;
 using System;
 
 public class PokeAPIBackend
@@ -90,7 +89,15 @@ public class PokeAPIBackend
 
         using (UnityWebRequest uwr = UnityWebRequest.Get(finalUrl))
         {
-            await uwr.SendWebRequest();
+            try
+            {
+                await uwr.SendWebRequest();
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning(e);
+                return null;
+            }
             if (uwr.result != UnityWebRequest.Result.Success)
             {
                 return null;

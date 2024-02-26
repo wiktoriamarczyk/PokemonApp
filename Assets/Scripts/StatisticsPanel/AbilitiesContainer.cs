@@ -19,9 +19,6 @@ public class AbilitiesContainer : MonoBehaviour
             abilityDisplay.Init(ability.name, ability.description, color);
             abilities.Add(abilityDisplay);
         }
-        LayoutRebuilder.ForceRebuildLayoutImmediate(container as RectTransform);
-        LayoutRebuilder.ForceRebuildLayoutImmediate(container.parent as RectTransform);
-
     }
 
     public void Deinit()
